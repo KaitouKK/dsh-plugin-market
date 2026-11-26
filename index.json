@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "title": { "en": "MobileWork Privacy Plugins", "zh": "隐私防护插件集" },
+  "description": {
+    "en": "Privacy protection plugins for personal LLM agents on DeepSeek Harness: deterministic PII guarding and pre-action privacy review.",
+    "zh": "面向 DSH 个人智能体的隐私防护插件集：确定性 PII 防护与操作前隐私审查。"
+  },
+  "metadata": {
+    "categories": {
+      "security": { "title": { "en": "Security & Privacy", "zh": "安全与隐私" } },
+      "guardrail": { "title": { "en": "Agent Guardrails", "zh": "智能体护栏" } }
+    },
+    "labels": {
+      "privacy": { "title": { "en": "Privacy", "zh": "隐私" } },
+      "pii": { "title": { "en": "PII", "zh": "个人信息" } },
+      "prompt-injection": { "title": { "en": "Prompt Injection", "zh": "提示词注入" } },
+      "approval": { "title": { "en": "Approval", "zh": "审批拦截" } },
+      "privacychecker": { "title": { "en": "PrivacyChecker", "zh": "隐私审查" } }
+    },
+    "sortKeys": {
+      "github_stars": { "title": { "en": "GitHub stars", "zh": "GitHub 星标" }, "order": "desc" }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-privacy-guard",
+      "title": { "en": "Privacy Guard", "zh": "隐私防护" },
+      "description": {
+        "en": "Deterministic privacy guard: PII detection & dynamic redaction, prompt-injection detection, sensitive-action approval interception, and audit logging.",
+        "zh": "确定性隐私防护：PII 检测与动态脱敏、提示词注入检测、敏感操作审批拦截与审计日志。"
+      },
+      "icon": "icons/dsh-privacy-guard.svg",
+      "author": "KaitouKK",
+      "homepage": "https://github.com/KaitouKK/dsh-privacy-guard#readme",
+      "repository": { "url": "https://github.com/KaitouKK/dsh-privacy-guard" },
+      "metadata": {
+        "category": "security",
+        "labels": ["privacy", "pii", "prompt-injection", "approval"],
+        "sortKeys": { "github_stars": 0 }
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1795674066,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/KaitouKK/dsh-privacy-guard",
+            "commit": "d591e7945b2da5e251634e51d6952ddeda5daf0e"
+          },
+          "engines": { "dsh": ">=0.2.0-rc.2" }
+        }
+      ]
+    },
+    {
+      "name": "dsh-privacychecker",
+      "title": { "en": "Privacy Checker", "zh": "操作前隐私审查" },
+      "description": {
+        "en": "Pre-action privacy review: intercepts agent operations before execution and runs a PrivacyChecker review (ALLOW/MODIFY/BLOCK), ported from microsoft/ACV PrivacyInAction.",
+        "zh": "操作前隐私审查：在 Agent 关键操作执行前拦截并进行 PrivacyChecker 审查（ALLOW/MODIFY/BLOCK），方法移植自 microsoft/ACV PrivacyInAction。"
+      },
+      "icon": "icons/dsh-privacychecker.svg",
+      "author": "KaitouKK",
+      "homepage": "https://github.com/KaitouKK/dsh-privacychecker#readme",
+      "repository": { "url": "https://github.com/KaitouKK/dsh-privacychecker" },
+      "metadata": {
+        "category": "guardrail",
+        "labels": ["privacy", "privacychecker", "approval"],
+        "sortKeys": { "github_stars": 0 }
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1795674000,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/KaitouKK/dsh-privacychecker",
+            "commit": "cac3b35f8c4ca017f573c73e751bf7a8a788a595"
+          },
+          "engines": { "dsh": ">=0.2.0-rc.2" }
+        }
+      ]
+    }
+  ]
+}
